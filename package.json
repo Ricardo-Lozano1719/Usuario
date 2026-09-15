@@ -1,0 +1,24 @@
+{
+  "name": "visual-cope-study",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ricardo-Lozano1719/Usuario.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Ricardo-Lozano1719/Usuario/issues"
+  },
+  "homepage": "https://github.com/Ricardo-Lozano1719/Usuario#readme",
+  "devDependencies": {
+    "jest": "^30.5.1"
+  }
+}
