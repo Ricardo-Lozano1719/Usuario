@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modulo Front-End - SENA GA7</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; background-color: #f4f6f9; }
+    .card { background: white; padding: 20px; border-radius: 8px; max-width: 500px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    h1 { color: #2c3e50; font-size: 20px; }
+    button { background-color: #007bff; color: white; border: none; padding: 10px 15px; border-radius: 4px; cursor: pointer; }
+    button:hover { background-color: #0056b3; }
+    #resultado { margin-top: 15px; padding: 10px; background: #e9ecef; border-radius: 4px; font-family: monospace; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Componente Front-End (AA4-EV03)</h1>
+    <p>Conexión a la API del servidor en Node.js Express:</p>
+    <button onclick="probarAPI()">Verificar Estado de API</button>
+    <div id="resultado">Esperando interacción...</div>
+  </div>
+
+  <script>
+    async function probarAPI() {
+      const divResultado = document.getElementById('resultado');
+      divResultado.textContent = 'Conectando con el servidor...';
+      try {
+        const res = await fetch('http://localhost:4000/api/health');
+        const data = await res.json();
+        divResultado.textContent = JSON.stringify(data, null, 2);
+      } catch (error) {
+        divResultado.textContent = 'Error de conexión: El servidor no está encendido.';
+      }
+    }
+  </script>
+</body>
+</html>
