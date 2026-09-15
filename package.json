@@ -20,5 +20,9 @@
   "homepage": "https://github.com/Ricardo-Lozano1719/Usuario#readme",
   "devDependencies": {
     "jest": "^30.5.1"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1"
   }
 }
